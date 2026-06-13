@@ -4,6 +4,7 @@ import { MagneticButton } from "@/components/ui/magnetic-button";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { DitherShader } from "@/components/ui/dither-shader";
 import ShinyText from "@/components/ui/shiny-text";
+import { ViewCounter } from "@/components/ui/view-counter";
 
 const Spline = dynamic(() => import("@splinetool/react-spline"), {
   ssr: false,
@@ -58,6 +59,7 @@ export function HeroSection() {
               <MagneticButton onClick={() => window.open("https://x.com/sujal_587", "_blank")} className="p-0 w-12 h-12 !px-0 !py-0 bg-white/5 dark:bg-white/5 border-white/10 dark:border-white/10 text-white dark:text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md cursor-pointer flex items-center justify-center">
                 <Twitter className="w-5 h-5" />
               </MagneticButton>
+              <ViewCounter />
             </div>
             <div className="block lg:hidden">
               <a href="https://drive.google.com/file/d/1tnAEAhTIx6xYi5oGjf7GVOXPFrkHNlAU/view?usp=sharing" target="_blank" className="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md whitespace-nowrap">
