@@ -1,4 +1,5 @@
 import { CrosshairIcon } from "@/components/ui/crosshair-icon";
+import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
@@ -90,9 +91,15 @@ export function HighlightsSection() {
 
   return (
     <section id="projects" className="py-20 px-4 md:px-8 max-w-7xl mx-auto relative">
-      <h2 className="text-4xl md:text-5xl font-bold mb-20 text-center text-white">
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5 }}
+        className="text-4xl md:text-5xl font-bold mb-20 text-center text-white"
+      >
         Featured Projects
-      </h2>
+      </motion.h2>
       <StickyScroll content={stickyContent} />
     </section>
   );

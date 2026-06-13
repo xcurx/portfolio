@@ -1,6 +1,7 @@
 import { 
   Code2, Layers, Server, Bot
 } from "lucide-react";
+import { motion } from "framer-motion";
 import { 
   SiTypescript, SiJavascript, SiGo, SiPython, SiCplusplus, 
   SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiFastapi, 
@@ -57,7 +58,12 @@ export function SkillsSection() {
   return (
     <section id="skills" className="py-32 px-8 max-w-7xl mx-auto flex flex-col gap-20">
       {/* My Expertise */}
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5 }}
+      >
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">My</span> Expertise
         </h2>
@@ -65,7 +71,14 @@ export function SkillsSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {expertise.map((item, idx) => (
-            <GlowingEffect key={idx} className="p-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: idx * 0.2 }}
+              key={idx}
+            >
+              <GlowingEffect className="p-8">
               <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 {item.icon}
               </div>
@@ -73,13 +86,20 @@ export function SkillsSection() {
               <p className="text-neutral-400 leading-relaxed text-sm">
                 {item.description}
               </p>
-            </GlowingEffect>
+              </GlowingEffect>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* Skills & Technologies */}
-      <div className="border border-white/10 p-8 md:p-12 rounded-xl bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl shadow-2xl flex flex-col items-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="border border-white/10 p-8 md:p-12 rounded-xl bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl shadow-2xl flex flex-col items-center"
+      >
         <p className="text-xs font-semibold tracking-widest text-neutral-500 uppercase mb-8">
           Skills & Technologies
         </p>
@@ -91,7 +111,7 @@ export function SkillsSection() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

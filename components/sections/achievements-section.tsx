@@ -1,4 +1,6 @@
+"use client";
 import { CrosshairIcon } from "@/components/ui/crosshair-icon";
+import { motion } from "framer-motion";
 
 export function AchievementsSection() {
   const achievements = [
@@ -22,12 +24,25 @@ export function AchievementsSection() {
 
   return (
     <section id="achievements" className="py-32 px-8 max-w-7xl mx-auto">
-      <h2 className="text-4xl font-bold mb-20 text-center text-white">
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5 }}
+        className="text-4xl font-bold mb-20 text-center text-white"
+      >
         Achievements
-      </h2>
+      </motion.h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
         {achievements.map((achievement, idx) => (
-          <div key={idx} className={`relative w-full border p-8 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl shadow-2xl overflow-hidden group transition-all duration-500 hover:-translate-y-1 rounded-xl ${achievement.highlight ? 'border-violet-500/50 shadow-[0_0_30px_-10px_rgba(139,92,246,0.5)]' : 'border-white/10 hover:border-violet-500/30'}`}>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5, delay: idx * 0.2 }}
+            key={idx} 
+            className={`relative w-full border p-8 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl shadow-2xl overflow-hidden group transition-all duration-500 hover:-translate-y-1 rounded-xl ${achievement.highlight ? 'border-violet-500/50 shadow-[0_0_30px_-10px_rgba(139,92,246,0.5)]' : 'border-white/10 hover:border-violet-500/30'}`}
+          >
             <CrosshairIcon className={`absolute h-6 w-6 -top-3 -left-3 z-20 transition-colors ${achievement.highlight ? 'text-violet-500' : 'text-white/20 group-hover:text-violet-500'}`} />
             <CrosshairIcon className={`absolute h-6 w-6 -bottom-3 -left-3 z-20 transition-colors ${achievement.highlight ? 'text-violet-500' : 'text-white/20 group-hover:text-violet-500'}`} />
             <CrosshairIcon className={`absolute h-6 w-6 -top-3 -right-3 z-20 transition-colors ${achievement.highlight ? 'text-violet-500' : 'text-white/20 group-hover:text-violet-500'}`} />
@@ -46,7 +61,7 @@ export function AchievementsSection() {
                 <span className="text-neutral-500 font-mono text-xs border border-white/10 px-3 py-1.5 rounded-full w-fit bg-white/5">{achievement.date}</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
