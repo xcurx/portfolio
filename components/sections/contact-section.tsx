@@ -9,7 +9,7 @@ export function ContactSection() {
     >
       <div className="absolute inset-0 bg-violet-500/5 blur-[120px] rounded-full pointer-events-none" />
       
-      <div className="w-full border border-white/10 bg-black/40 backdrop-blur-xl p-10 md:p-16 rounded-3xl flex flex-col items-center text-center relative z-10 hover:border-violet-500/30 transition-colors duration-500">
+      <div className="w-full border border-white/10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-2xl shadow-2xl p-10 md:p-16 rounded-3xl flex flex-col items-center text-center relative z-10 hover:border-violet-500/30 transition-colors duration-500">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
           Let's build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">together</span>
         </h2>

@@ -79,7 +79,7 @@ export function SkillsSection() {
       </div>
 
       {/* Skills & Technologies */}
-      <div className="border border-white/10 p-8 md:p-12 rounded-xl bg-black/40 backdrop-blur-md flex flex-col items-center">
+      <div className="border border-white/10 p-8 md:p-12 rounded-xl bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl shadow-2xl flex flex-col items-center">
         <p className="text-xs font-semibold tracking-widest text-neutral-500 uppercase mb-8">
           Skills & Technologies
         </p>

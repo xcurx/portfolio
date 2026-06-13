@@ -72,7 +72,7 @@ export function HighlightsSection() {
       </div>
     ),
     content: (
-      <div className="w-full h-full relative group overflow-hidden bg-black/40 backdrop-blur-md">
+      <div className="w-full h-full relative group overflow-hidden bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl shadow-2xl">
         <CrosshairIcon className="absolute h-6 w-6 -top-3 -left-3 text-white/20 z-20" />
         <CrosshairIcon className="absolute h-6 w-6 -bottom-3 -left-3 text-white/20 z-20" />
         <CrosshairIcon className="absolute h-6 w-6 -top-3 -right-3 text-white/20 z-20" />

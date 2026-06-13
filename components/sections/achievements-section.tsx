@@ -27,7 +27,7 @@ export function AchievementsSection() {
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
         {achievements.map((achievement, idx) => (
-          <div key={idx} className={`relative w-full border p-8 bg-black/40 backdrop-blur-md overflow-hidden group transition-all duration-500 hover:-translate-y-1 ${achievement.highlight ? 'border-violet-500/50 shadow-[0_0_30px_-10px_rgba(139,92,246,0.3)]' : 'border-white/10 hover:border-violet-500/30'}`}>
+          <div key={idx} className={`relative w-full border p-8 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl shadow-2xl overflow-hidden group transition-all duration-500 hover:-translate-y-1 rounded-xl ${achievement.highlight ? 'border-violet-500/50 shadow-[0_0_30px_-10px_rgba(139,92,246,0.5)]' : 'border-white/10 hover:border-violet-500/30'}`}>
             <CrosshairIcon className={`absolute h-6 w-6 -top-3 -left-3 z-20 transition-colors ${achievement.highlight ? 'text-violet-500' : 'text-white/20 group-hover:text-violet-500'}`} />
             <CrosshairIcon className={`absolute h-6 w-6 -bottom-3 -left-3 z-20 transition-colors ${achievement.highlight ? 'text-violet-500' : 'text-white/20 group-hover:text-violet-500'}`} />
             <CrosshairIcon className={`absolute h-6 w-6 -top-3 -right-3 z-20 transition-colors ${achievement.highlight ? 'text-violet-500' : 'text-white/20 group-hover:text-violet-500'}`} />

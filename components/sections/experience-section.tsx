@@ -43,7 +43,7 @@ export function ExperienceSection() {
             key={idx} 
             className="w-full h-full"
           >
-            <div className="relative w-full h-full border border-white/10 p-8 md:p-10 bg-black/40 backdrop-blur-md overflow-hidden hover:border-violet-500/30 transition-colors flex flex-col">
+            <div className="relative w-full h-full border border-white/10 p-8 md:p-10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl shadow-2xl overflow-hidden hover:border-violet-500/30 transition-colors flex flex-col rounded-xl">
               <CrosshairIcon className="absolute h-6 w-6 -top-3 -left-3 text-white/20 z-20" />
               <CrosshairIcon className="absolute h-6 w-6 -bottom-3 -left-3 text-white/20 z-20" />
               <CrosshairIcon className="absolute h-6 w-6 -top-3 -right-3 text-white/20 z-20" />

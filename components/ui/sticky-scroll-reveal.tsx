@@ -62,7 +62,7 @@ export const StickyScroll = ({
       <div className="div relative flex items-start px-4 w-full md:w-1/2">
         <div className="max-w-2xl w-full">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20 relative p-8 md:p-12 border border-white/10 bg-black/40 backdrop-blur-md hover:border-violet-500/30 transition-all">
+            <div key={item.title + index} className="my-20 relative p-8 md:p-12 border border-white/10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl shadow-2xl hover:border-violet-500/30 transition-all rounded-xl">
               <CrosshairIcon className="absolute h-6 w-6 -top-3 -left-3 text-white/20 z-20" />
               <CrosshairIcon className="absolute h-6 w-6 -bottom-3 -left-3 text-white/20 z-20" />
               <CrosshairIcon className="absolute h-6 w-6 -top-3 -right-3 text-white/20 z-20" />
