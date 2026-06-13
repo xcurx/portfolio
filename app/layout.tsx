@@ -20,9 +20,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Telemetry Portfolio | Creative Systems Engineer",
+  title: "Sujal Kachhawah",
   description:
-    "High-performance code architectures, telemetry dashboards, and beautiful visual systems.",
+    "Portfolio of Sujal, a Fullstack Developer building high-performance web applications and agentic AI systems.",
 };
 
 export default function RootLayout({
