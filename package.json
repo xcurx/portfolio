@@ -39,5 +39,6 @@
   },
   "resolutions": {
     "three": "^0.184.0"
-  }
+  },
+  "packageManager": "pnpm@11.5.3"
 }
