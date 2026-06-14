@@ -24,7 +24,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0 w-full h-full">
         <Spline
           scene="https://prod.spline.design/xrCDu3lzp1CWryl0/scene.splinecode"
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: "100%", height: "100%" }}
         />
       </div>
 
@@ -36,7 +36,7 @@ export function HeroSection() {
               <span className="bg-gradient-to-r from-violet-500 to-fuchsia-500 text-transparent bg-clip-text">
                 Sujal Kachhawah
               </span>
-              <ShinyText 
+              <ShinyText
                 text="Sujal Kachhawah"
                 color="transparent"
                 shineColor="rgba(255,255,255,0.7)"
@@ -46,23 +46,46 @@ export function HeroSection() {
             </span>
           </h1>
           <p className="mt-8 text-neutral-300 text-base md:text-lg max-w-xl font-medium leading-relaxed">
-            Fullstack Developer specializing in Next.js, Go, and WebSockets. I build real-time collaborative systems, AI-driven applications, and robust scalable platforms. Smart India Hackathon 2025 National Winner.
+            Fullstack Developer specializing in Next.js, Go, and WebSockets. I
+            build real-time collaborative systems, AI-driven applications, and
+            robust scalable platforms. Smart India Hackathon 2025 National
+            Winner.
           </p>
           <div className="flex items-center justify-between w-full mt-8 pointer-events-auto">
             <div className="flex items-center gap-4">
-              <MagneticButton onClick={() => window.open("https://github.com/xcurx", "_blank")} className="p-0 w-12 h-12 !px-0 !py-0 bg-white/5 dark:bg-white/5 border-white/10 dark:border-white/10 text-white dark:text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md cursor-pointer flex items-center justify-center">
+              <MagneticButton
+                onClick={() =>
+                  window.open("https://github.com/xcurx", "_blank")
+                }
+                className="p-0 w-12 h-12 !px-0 !py-0 bg-white/5 dark:bg-white/5 border-white/10 dark:border-white/10 text-white dark:text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md cursor-pointer flex items-center justify-center"
+              >
                 <Github className="w-5 h-5" />
               </MagneticButton>
-              <MagneticButton onClick={() => window.open("https://linkedin.com/in/sujal-kachhawah-058564291", "_blank")} className="p-0 w-12 h-12 !px-0 !py-0 bg-white/5 dark:bg-white/5 border-white/10 dark:border-white/10 text-white dark:text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md cursor-pointer flex items-center justify-center">
+              <MagneticButton
+                onClick={() =>
+                  window.open(
+                    "https://linkedin.com/in/sujal-kachhawah-058564291",
+                    "_blank",
+                  )
+                }
+                className="p-0 w-12 h-12 !px-0 !py-0 bg-white/5 dark:bg-white/5 border-white/10 dark:border-white/10 text-white dark:text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md cursor-pointer flex items-center justify-center"
+              >
                 <Linkedin className="w-5 h-5" />
               </MagneticButton>
-              <MagneticButton onClick={() => window.open("https://x.com/sujal_587", "_blank")} className="p-0 w-12 h-12 !px-0 !py-0 bg-white/5 dark:bg-white/5 border-white/10 dark:border-white/10 text-white dark:text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md cursor-pointer flex items-center justify-center">
+              <MagneticButton
+                onClick={() => window.open("https://x.com/sujal_587", "_blank")}
+                className="p-0 w-12 h-12 !px-0 !py-0 bg-white/5 dark:bg-white/5 border-white/10 dark:border-white/10 text-white dark:text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md cursor-pointer flex items-center justify-center"
+              >
                 <Twitter className="w-5 h-5" />
               </MagneticButton>
               <ViewCounter />
             </div>
             <div className="block lg:hidden">
-              <a href="https://drive.google.com/file/d/1tnAEAhTIx6xYi5oGjf7GVOXPFrkHNlAU/view?usp=sharing" target="_blank" className="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md whitespace-nowrap">
+              <a
+                href="https://drive.google.com/file/d/1tnAEAhTIx6xYi5oGjf7GVOXPFrkHNlAU/view?usp=sharing"
+                target="_blank"
+                className="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md whitespace-nowrap"
+              >
                 View Resume
               </a>
             </div>
@@ -75,7 +98,13 @@ export function HeroSection() {
               gridSize={2}
               ditherMode="bayer"
               colorMode="custom"
-              customPalette={["#000000", "#4c1d95", "#8b5cf6", "#d946ef", "#ffffff"]}
+              customPalette={[
+                "#000000",
+                "#4c1d95",
+                "#8b5cf6",
+                "#d946ef",
+                "#ffffff",
+              ]}
               contrast={0.95}
               threshold={0.2}
               animated={true}
@@ -91,7 +120,11 @@ export function HeroSection() {
           Crafting Awesome UI, Fullstack Apps, and AI Agents for the Modern Web.
         </p>
         <div className="flex items-center gap-4">
-          <a href="https://drive.google.com/file/d/1tnAEAhTIx6xYi5oGjf7GVOXPFrkHNlAU/view?usp=sharing" target="_blank" className="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md">
+          <a
+            href="https://drive.google.com/file/d/1tnAEAhTIx6xYi5oGjf7GVOXPFrkHNlAU/view?usp=sharing"
+            target="_blank"
+            className="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-white hover:bg-white/10 hover:border-violet-500/50 transition-all backdrop-blur-md"
+          >
             View Resume
           </a>
         </div>

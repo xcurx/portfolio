@@ -16,7 +16,7 @@ export function ViewCounter() {
           url += "?action=up";
           sessionStorage.setItem("portfolio_visited", "true");
         }
-        
+
         const res = await fetch(url);
         const data = await res.json();
         setViews(data.count);
@@ -24,14 +24,14 @@ export function ViewCounter() {
         console.error("Failed to fetch view count", error);
       }
     };
-    
+
     fetchViews();
   }, []);
 
   if (views === null) return null;
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: 0.5 }}

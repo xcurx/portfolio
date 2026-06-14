@@ -1,14 +1,13 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ['three', '@react-three/fiber', '@react-three/drei'],
-  
+  transpilePackages: ["three", "@react-three/fiber", "@react-three/drei"],
+
   turbopack: {
     resolveAlias: {
-      three: 'three',
+      three: "three",
     },
   },
-}
+};
 
-export default nextConfig
-
+export default nextConfig;

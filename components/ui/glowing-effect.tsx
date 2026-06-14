@@ -42,7 +42,10 @@ export const GlowingEffect = ({
   return (
     <div
       ref={containerRef}
-      className={cn("relative overflow-hidden rounded-xl bg-black/20 backdrop-blur-lg border border-white/10 group", className)}
+      className={cn(
+        "relative overflow-hidden rounded-xl bg-black/20 backdrop-blur-lg border border-white/10 group",
+        className,
+      )}
       {...props}
     >
       {/* Background radial gradient */}
@@ -53,7 +56,7 @@ export const GlowingEffect = ({
           background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, ${color}15, transparent 40%)`,
         }}
       />
-      
+
       {/* Border radial gradient mask */}
       <div
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 z-0 rounded-[inherit]"
@@ -61,13 +64,14 @@ export const GlowingEffect = ({
           opacity,
         }}
       >
-        <div 
+        <div
           className="absolute inset-0 rounded-[inherit] border border-transparent"
           style={{
             background: `radial-gradient(400px circle at ${position.x}px ${position.y}px, ${color}80, transparent 40%) border-box`,
-            WebkitMask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
+            WebkitMask:
+              "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
             WebkitMaskComposite: "xor",
-            maskComposite: "exclude"
+            maskComposite: "exclude",
           }}
         />
       </div>

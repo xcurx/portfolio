@@ -7,24 +7,35 @@ import { SkillsSection } from "@/components/sections/skills-section";
 import { HighlightsSection } from "@/components/sections/highlights-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { AchievementsSection } from "@/components/sections/achievements-section";
+import { GithubSection } from "@/components/sections/github-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import dynamic from "next/dynamic";
 
-const PixelBlast = dynamic(() => import("@/components/ui/PixelBlast"), { ssr: false });
+const PixelBlast = dynamic(() => import("@/components/ui/PixelBlast"), {
+  ssr: false,
+});
 
 export default function Portfolio() {
   const navItems = [
     { name: "Home", link: "#home", icon: <Home className="h-4 w-4" /> },
     { name: "About", link: "#skills", icon: <User className="h-4 w-4" /> },
-    { name: "Projects", link: "#projects", icon: <Folder className="h-4 w-4" /> },
-    { name: "Contact", link: "#contact", icon: <MessageSquare className="h-4 w-4" /> },
+    {
+      name: "Projects",
+      link: "#projects",
+      icon: <Folder className="h-4 w-4" />,
+    },
+    {
+      name: "Contact",
+      link: "#contact",
+      icon: <MessageSquare className="h-4 w-4" />,
+    },
   ];
 
   return (
     <main className="bg-black min-h-screen text-white relative">
       <FloatingNav navItems={navItems} />
       <HeroSection />
-      
+
       <div className="relative w-full">
         {/* Background layer */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -56,6 +67,7 @@ export default function Portfolio() {
           <ExperienceSection />
           <HighlightsSection />
           <AchievementsSection />
+          <GithubSection />
           <ContactSection />
         </div>
       </div>

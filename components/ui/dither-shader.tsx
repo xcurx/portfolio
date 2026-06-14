@@ -339,7 +339,8 @@ export const DitherShader: React.FC<DitherShaderProps> = ({
     const processImage = (img: HTMLImageElement) => {
       if (isCancelled) return;
 
-      const dpr = typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
+      const dpr =
+        typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
       const displayWidth = Math.floor(dimensions.width);
       const displayHeight = Math.floor(dimensions.height);
       canvas.width = Math.floor(displayWidth * dpr);
@@ -445,7 +446,10 @@ export const DitherShader: React.FC<DitherShaderProps> = ({
   }, [src, dimensions, objectFit, animated, animationSpeed, applyDithering]);
 
   return (
-    <div ref={containerRef} className={cn("relative h-full w-full flex", className)}>
+    <div
+      ref={containerRef}
+      className={cn("relative h-full w-full flex", className)}
+    >
       <canvas
         ref={canvasRef}
         className="absolute inset-0 h-full w-full block"

@@ -1,8 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const components = ['ascii-art', 'pixelated-canvas', 'dither-shader'];
-const outDir = path.join(__dirname, 'components', 'ui');
+const components = ["ascii-art", "pixelated-canvas", "dither-shader"];
+const outDir = path.join(__dirname, "components", "ui");
 
 if (!fs.existsSync(outDir)) {
   fs.mkdirSync(outDir, { recursive: true });
