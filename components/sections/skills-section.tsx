@@ -9,6 +9,7 @@ import {
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
+  SiFramer,
   SiNodedotjs,
   SiFastapi,
   SiPostgresql,
@@ -67,6 +68,7 @@ export function SkillsSection() {
       name: "Tailwind CSS",
       icon: <SiTailwindcss className="w-4 h-4 text-teal-400" />,
     },
+    { name: "Framer Motion", icon: <SiFramer className="w-4 h-4 text-violet-400" /> },
     {
       name: "Node.js",
       icon: <SiNodedotjs className="w-4 h-4 text-green-500" />,
